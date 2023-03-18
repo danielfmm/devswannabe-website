@@ -1,0 +1,80 @@
+@import '../abstract/_var'
+.welcome
+    
+    position: relative
+    height: 100vh
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    justify-content: center
+    align-items: center
+    color: white
+    img
+        display: none
+    h1
+        font-family: $fonte
+        font-weight: 600
+        text-shadow: #000000 1px 0 2px
+    h3
+        font-family: $fonte
+        font-weight: 300
+        text-shadow: #000000 1px 0 2px
+
+        /* Markup */
+    font-family: "Lucida Console", Monaco, monospace
+
+    .arrow-animation
+        padding: 20px
+        text-align: center
+
+    .scroll_down
+        position: absolute
+        left: 50%
+        top: 60%
+        transform: translate(-50%, -50%)
+
+        p
+            margin: 0 0 20px
+
+
+    #more-arrows
+        width: 75px
+        height: 65px
+        &:hover
+
+            polygon
+                fill: #FFF
+                transition: all .2s ease-out
+
+                &.arrow-bottom
+                    transform: translateY(-18px)
+
+                &.arrow-top
+                    transform: translateY(18px)
+
+    polygon
+        fill: #FFF
+        transition: all .2s ease-out
+
+        &.arrow-middle
+            opacity: 0.75
+
+        &.arrow-top
+            opacity: 0.5
+
+@media screen and (max-width: 1024px)
+    .welcome
+        padding-top: 2rem
+        justify-content: flex-start
+        align-items: center
+        text-align: center
+        h1
+            margin: 1rem
+        h3
+            padding-top: 10rem
+            padding-left: 2rem
+            padding-right: 2rem
+        img
+            display: block
+            width: 15rem
+            

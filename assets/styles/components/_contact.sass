@@ -1,0 +1,99 @@
+#contact
+    .form
+        width: 760px
+        height: 440px
+        background: #e6e6e6
+        border-radius: 8px
+        box-shadow: 0 0 40px -10px #000
+        margin: 1rem auto
+        padding: 10px 30px
+        box-sizing: border-box
+        font-family: 'Montserrat', sans-serif
+        position: relative
+        h2
+            font-size: 2rem
+            padding-bottom: 10px
+            margin-bottom: 3rem
+            width: 600px
+            color: #78788c
+            border-bottom: 3px solid #78788c
+        input
+            width: 90%
+            padding: 20px
+            box-sizing: none
+            background: none
+            outline: none
+            resize: none
+            border: 0
+            font-family: 'Montserrat',sans-serif
+            transition: all 300ms ease-in
+            border-bottom: 2px solid #bebed2
+            &::placeholder
+                font-size: 1.2rem
+
+            &:focus
+                border-bottom: 2px solid #78788c
+            &:beforecontent
+
+                display: attr(type)
+                blockmargin: 28px 0 0
+                font-size: 14px
+                color: #5a5a5a
+        button
+            float: right
+            padding: 14px 18px
+            margin: 1.5rem 0 0
+            font-family: 'Montserrat',sans-serif
+            border: 2px solid #78788c
+            background: 0
+            color: #5a5a6e
+            cursor: pointer
+            transition: all .3s
+            &:hover
+                background: #78788c
+                color: #fff
+        div
+            position: absolute
+            bottom: -15px
+            right: -20px
+            background: #50505a
+            color: #fff
+            width: 320px
+            padding: 16px 4px 16px 10px
+            border-radius: 6px
+            font-size: 16px
+            box-shadow: 10px 10px 40px -14px #000
+        span
+            margin-right: .5rem
+
+@media screen and (max-width: 1024px)
+    #contact
+        display: flex
+        .form
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-flow: column wrap
+            border: none
+            box-shadow: none
+            padding: 0
+            margin: 0
+            width: 100%
+            
+            height: none
+            background: #e6e6e6
+            border-radius: 8px
+            box-shadow: 0 0 40px -10px #000
+            margin: 1rem auto
+            padding: 1px 3px
+            div
+                top: none
+                bottom: none
+                left: none
+                right: none
+                justify-content: center
+            h2
+                font-size: 1rem
+                padding-bottom: 0
+                margin-bottom: 3rem
+                width: 100%

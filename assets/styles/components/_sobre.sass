@@ -1,0 +1,116 @@
+#sobre
+    color: white
+    font-weight: 300
+    margin-top: 10rem
+    margin-bottom: 10rem
+    h2
+        text-align: center
+        margin: 5rem 0 2rem 0
+
+    i
+        padding-right: .3rem
+    .container
+        .container__sobre
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+            gap: 1rem
+            font-size: 1.2rem
+            .container__sobre-grupo
+                width: 700px
+                position: relative
+                display: flex
+                flex-flow: row nowrap
+                background: #105E83
+                align-items: center
+                margin: 1rem
+                padding: 1rem
+                gap: 1rem
+                text-align: justify
+                box-shadow: 2px 2px 15px rgb(0, 0, 0, .6)
+                border-radius: 10px
+
+                // border: 12px solid white
+                img
+                    background: #b9bfcc
+                    width: 200px
+                    border: 3px solid #053850
+                    mask-clip: fill-box
+                    border-radius: 50%
+                p
+                    span
+                        font-weight: 600
+
+            .container__sobre-capivara
+                width: 700px
+                display: flex
+                flex-flow: row-reverse nowrap
+                background: #105E83
+                color: white
+                margin: 1rem
+                padding: 1rem
+                border-radius: 10px
+                align-items: center
+                text-align: justify
+                box-shadow: 2px 2px 15px rgb(0, 0, 0, .6)
+                gap: 1rem
+                z-index: 2
+                
+                //border: 12px solid white
+                img
+                    background: #b9bfcc
+                    width: 200px
+                    z-index: 1
+                    border: 3px solid #053850
+                    border-radius: 50%
+                p
+                    span
+                        font-weight: 600
+
+@media screen and (max-width: 900px)
+    #sobre
+        padding: 0
+        margin: 0
+        .container
+            .container__sobre
+                border: none
+                box-shadow: none
+                padding: 0
+                margin: 0
+                flex-flow: column nowrap
+                justify-content: center
+                .container__sobre-grupo
+                    max-width: none
+                    width: 100%
+                    display: flex
+                    flex-flow: row nowrap
+                .container__sobre-capivara
+                    max-width: none
+                    width: 100%
+                    display: flex
+                    flex-flow: row-reverse nowrap
+
+@media screen and (max-width: 560px)
+    #sobre
+        padding: 0
+        margin: 0
+        .container
+            .container__sobre
+                border: none
+                box-shadow: none
+                padding: 0
+                margin: 0
+                flex-flow: column nowrap
+                justify-content: center
+                .container__sobre-grupo
+                    padding: .5rem
+                    margin: 0
+                    width: 90%
+                    display: flex
+                    flex-flow: column nowrap
+                .container__sobre-capivara
+                    padding: .5rem
+                    margin: 0
+                    width: 90%
+                    display: flex
+                    flex-flow: column nowrap
