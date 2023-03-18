@@ -1,0 +1,220 @@
+@import '_var'
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;600&display=swap')
+
+
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    scroll-behavior: smooth
+    scroll-padding-top: 8rem
+    scroll-snap-align: center
+    scroll-margin-top: 0
+
+body
+    //background-color: #b9bfcc
+    background-color: black
+    font-family: $fonte
+    font-size: $tamanho-da-fonte
+    letter-spacing: 1px
+
+    .fireflies
+        li
+            border-radius: 50%
+            background-color: rgb(255, 255, 73)
+            background-image: radial-gradient(rgb(249, 206, 36) 5%, rgb(254, 179, 4) 25%, rgb(252, 191, 7) 60%)
+            box-shadow: 0 0 5px 2px rgb(250, 193, 93), 0 0 20px 10px rgb(255, 228, 140), 0 0 40px 15px rgb(255, 219, 41)
+            height: 5px
+            width: 5px
+            position: absolute
+            top: -80
+            left: -10
+            bottom: -50
+            
+
+
+            animation: leftright 5s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 5s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1), blinking 3s infinite
+
+            &:nth-of-type(1)
+                animation-delay: 1s
+                animation-duration: 65s, 81s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(2)
+                animation-delay: 0.5s
+                animation-duration: 80s, 75s, 0.01s
+
+            &:nth-of-type(3)
+                animation-delay: 1.5s
+                animation-duration: 70s, 60s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(4)
+                animation-delay: 0.1s
+                animation-duration: 90s, 80s, 0.01s
+
+            &:nth-of-type(5)
+                animation-delay: 0.3s
+                animation-duration: 55s, 75s, 0.01s
+
+            &:nth-of-type(6)
+                animation-delay: 2.2s
+                animation-duration: 79s, 63s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(7)
+                animation-delay: 0.9s
+                animation-duration: 70s, 80s, 0.01s
+
+            &:nth-of-type(8)
+                animation-delay: 1.6s
+                animation-duration: 50s, 40s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(9)
+                animation-delay: 1.8s
+                animation-duration: 77s, 88s, 0.01s
+
+            &:nth-of-type(10)
+                animation-delay: 3s
+                animation-duration: 87s, 73s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(11)
+                animation-delay: 1s
+                animation-duration: 60s, 78s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(12)
+                animation-delay: 0.5s
+                animation-duration: 85s, 80s, 0.01s
+
+            &:nth-of-type(13)
+                animation-delay: 1.5s
+                animation-duration: 75s, 66s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(14)
+                animation-delay: 2.5s
+                animation-duration: 87s, 75s, 0.01s
+
+            &:nth-of-type(15)
+                animation-delay: 0.3s
+                animation-duration: 69s, 85s, 0.01s
+
+            &:nth-of-type(16)
+                animation-delay: 2.2s
+                animation-duration: 80s, 77s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(17)
+                animation-delay: 0.9s
+                animation-duration: 65s, 88s, 0.01s
+
+            &:nth-of-type(18)
+                animation-delay: 1.6s
+                animation-duration: 59s, 63s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+            &:nth-of-type(19)
+                animation-delay: 1.9s
+                animation-duration: 88s, 79s, 0.01s
+
+            &:nth-of-type(20)
+                animation-delay: 2s
+                animation-duration: 10s, 75s, 0.01s
+                animation-fill-mode: backwards, backwards
+
+    @keyframes leftright
+
+        0%,
+        100%
+            left: 80%
+
+        16.666%
+            left: 95%
+
+        33.333%
+            left: 10%
+
+        50%
+            left: 55%
+
+        66.666%
+            left: 75%
+
+        83.333%
+            left: 5%
+
+    @keyframes updown
+
+        0%,
+        100%
+            top: 5px
+
+        25%
+            top: 90%
+
+        50%
+            top: 30%
+
+        75%
+            top: 95%
+
+    @keyframes blinking
+        0%,
+        100%
+            box-shadow: 0 0 5px 2px rgb(250, 193, 93), 0 0 10px 5px rgb(255, 242, 63), 0 0 30px 10px rgb(255, 219, 41)
+            height: 0
+            width: 0
+
+        50%
+            box-shadow: 0 0 5px 2px rgb(250, 193, 93), 0 0 20px 10px rgb(255, 228, 140), 0 0 40px 15px rgb(255, 219, 41)
+
+        75%
+            box-shadow: 0 0 0px 0px rgb(250, 193, 93), 0 0 0px 0px rgb(255, 228, 140), 0 0 0px 0px rgb(255, 219, 41)
+
+    .overlay
+        position: absolute
+        background: url('../img/capivara_background.png') no-repeat
+        background-size: cover
+        background-clip: top
+        background-position: center
+        height: 100vh
+        width: 100%
+        opacity: .7
+    .overlay_second_color
+        background: rgb(198, 211, 216)
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, #8791a7 20%,#b9bfcc 100%)
+
+@media screen and (min-width: 1800px)
+    body
+        .overlay
+            background-position: bottom
+
+@media screen and (max-width: 1024px)
+    body
+        .overlay
+            background-position: top
+            background-position-y: -10rem
+            background-position-x: -45rem
+
+        .fireflies
+            display: none
+
+@media screen and (max-width: 620px)
+    *
+        margin: 0
+        padding: 0
+        text-decoration: none
+        scroll-behavior: smooth
+        scroll-padding-top: 2rem
+        scroll-snap-align: center
+        scroll-margin-top: 0
+
+    body
+        .overlay
+            background-size: auto
+            background-position: center
+            background-position-y: -40rem
+            background-position-x: -95rem
