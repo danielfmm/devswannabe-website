@@ -24,19 +24,19 @@
                 flex-flow: row nowrap
                 background: #105E83
                 margin: 1rem
-                padding: 1rem
                 gap: 1rem
                 align-items: center
                 text-align: justify
                 box-shadow: 2px 2px 15px rgb(0, 0, 0, .6)
-                border-radius: 10px
-
+                // border-radius: 10px
+                border-radius: 25% 0 0 25% / 100%
+                padding: 0 1rem 0 0
                 // border: 12px solid white
                 img
                     background: #b9bfcc
                     width: 200px
-                    border: 3px solid #053850
-                    mask-clip: fill-box
+                    border: 5px solid #105E83
+                    margin: -1rem
                     border-radius: 50%
                 p
                     span
@@ -50,7 +50,8 @@
                 color: white
                 margin: 1rem
                 padding: 1rem
-                border-radius: 10px
+                border-radius: 0 25% 25% 0 / 100%
+                padding: 0 0 0 1rem
                 align-items: center
                 text-align: justify
                 box-shadow: 2px 2px 15px rgb(0, 0, 0, .6)
@@ -62,7 +63,8 @@
                     background: #b9bfcc
                     width: 200px
                     z-index: 1
-                    border: 3px solid #053850
+                    border: 5px solid #105E83
+                    margin: -1rem
                     border-radius: 50%
                 p
                     span
@@ -104,14 +106,22 @@
                 flex-flow: column nowrap
                 justify-content: center
                 .container__sobre-grupo
-                    padding: .5rem
+                    padding: 1rem
                     margin: 0
                     width: 90%
                     display: flex
                     flex-flow: column nowrap
+                    border-radius: 10px
+                    img
+                        margin: 0
+                        border: 3px solid #004363
                 .container__sobre-capivara
-                    padding: .5rem
+                    padding: 1rem
                     margin: 0
                     width: 90%
                     display: flex
                     flex-flow: column nowrap
+                    border-radius: 10px
+                    img
+                        margin: 0
+                        border: 3px solid #004363
