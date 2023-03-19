@@ -22,10 +22,10 @@ body .fireflies li {
   box-shadow: 0 0 5px 2px rgb(250, 193, 93), 0 0 20px 10px rgb(255, 228, 140), 0 0 40px 15px rgb(255, 219, 41);
   height: 5px;
   width: 5px;
+  position: absolute;
   top: -80;
   left: -10;
   bottom: -50;
-  position: absolute;
   animation: leftright 5s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 5s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1), blinking 3s infinite;
 }
 body .fireflies li:nth-of-type(1) {
@@ -218,7 +218,7 @@ header {
   z-index: 3000;
 }
 header .container__header {
-  padding: 0.5rem 20% 0.5rem 20%;
+  padding: 0.5rem 10% 0.5rem 10%;
 }
 header .container__header ul {
   padding: 0.5rem;
@@ -242,9 +242,6 @@ header .container__header ul li {
 header .container__header ul li:hover {
   border-bottom: 3px solid white;
 }
-header .container__header ul li:hover:active {
-  border-bottom: 3px solid white;
-}
 header .container__header ul li i {
   padding: 0.5rem;
 }
@@ -254,7 +251,7 @@ header .container__header ul li a {
 
 @media screen and (max-width: 1024px) {
   header {
-    position: relative;
+    position: fixed;
     background-position: center;
     background-position-x: -5rem;
   }
@@ -265,7 +262,7 @@ header .container__header ul li a {
     display: none;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   header {
     background: black;
     opacity: 100%;
@@ -275,10 +272,9 @@ header .container__header ul li a {
     padding: 0;
   }
   header .container__header ul {
-    padding: 0 0.5rem 0 0.5rem;
     display: flex;
-    justify-content: space-around;
-    gap: 1.6rem;
+    justify-content: space-evenly;
+    gap: 2rem;
   }
   header .container__header ul img {
     display: none;
@@ -291,6 +287,17 @@ header .container__header ul li a {
   }
   header .container__header ul li a i {
     display: flex;
+  }
+  header .container__header ul li:hover {
+    border: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .container__header ul {
+    gap: 0.8rem;
+  }
+  header .container__header ul li:hover {
+    border: none;
   }
 }
 .welcome {
@@ -358,7 +365,7 @@ header .container__header ul li a {
 
 @media screen and (max-width: 1024px) {
   .welcome {
-    padding-top: 2rem;
+    padding-top: 4rem;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
@@ -367,13 +374,23 @@ header .container__header ul li a {
     margin: 1rem;
   }
   .welcome h3 {
-    padding-top: 10rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    align-self: bottom;
   }
   .welcome img {
     display: block;
-    width: 15rem;
+    width: 12rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .welcome h1 {
+    margin: 1rem;
+  }
+  .welcome h3 {
+    align-self: bottom;
+  }
+  .welcome img {
+    display: block;
+    width: 12rem;
   }
 }
 main {
@@ -407,6 +424,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   font-size: 1.2rem;
 }
@@ -416,10 +434,10 @@ main {
   display: flex;
   flex-flow: row nowrap;
   background: #105E83;
-  align-items: center;
   margin: 1rem;
   padding: 1rem;
   gap: 1rem;
+  align-items: center;
   text-align: justify;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -533,7 +551,7 @@ main {
 }
 #staff .container__cards .card {
   position: relative;
-  width: 400px;
+  min-width: 300px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 60px;
@@ -602,6 +620,7 @@ main {
   color: white;
   font-weight: 300;
   margin: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -614,39 +633,108 @@ main {
 #services i {
   padding-right: 0.3rem;
 }
-#services .container__services {
+#services ul {
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
+  list-style: none;
+  gap: 2rem;
+}
+#services ul li {
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+#services ul li div {
+  display: flex;
+  flex-flow: row nowrap;
   align-items: center;
-  max-width: 700px;
-  margin: 0;
-  padding: 0;
-  border: 1rem solid white;
-  border-radius: 8px;
-  box-shadow: 0 0 40px -10px #000;
 }
-#services .container__services img {
-  width: 20%;
-  filter: invert(80%);
+#services ul li div img {
+  width: 200px;
 }
-#services .container__services img:hover {
-  filter: grayscale(100%) contrast(50%);
-  z-index: 3000;
+#services ul li div p {
+  color: #105E83;
+  text-align: start;
+}
+#services ul li div p span {
+  font-weight: 600;
 }
 
-@media screen and (max-width: 1024px) {
-  #services .container__services {
+@media screen and (min-width: 1440px) {
+  #services ul {
     display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
     justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    border: 12px solid white;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  #services .container__services img {
-    width: 100%;
+  #services ul li {
+    width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #services ul li div {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #services ul li div img {
+    width: 300px;
+  }
+  #services ul li div p {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #services ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+  #services ul li {
+    width: 240px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #services ul li div {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #services ul li div img {
+    width: 240px;
+  }
+  #services ul li div p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  #services ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+  #services ul li {
+    width: 250px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #services ul li div {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #services ul li div img {
+    width: 250px;
+  }
+  #services ul li div p {
+    display: none;
+    font-size: 1.4rem;
   }
 }
 #contact .form {
@@ -727,6 +815,11 @@ main {
   margin-right: 0.5rem;
 }
 
+@media screen and (min-width: 1440px) {
+  #contact {
+    margin-top: 4rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   #contact {
     display: flex;
@@ -760,6 +853,34 @@ main {
     padding-bottom: 0;
     margin-bottom: 3rem;
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #contact .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: 1rem auto;
+    padding: 1px 3px;
+  }
+  #contact .form div {
+    margin-top: 1rem;
+    position: relative;
+    box-shadow: none;
+    width: 60vw;
+  }
+  #contact .form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    width: 60vw;
+  }
+  #contact .form input {
+    width: 50vw;
   }
 }
 footer {

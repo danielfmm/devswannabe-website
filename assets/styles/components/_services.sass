@@ -2,6 +2,7 @@
     color: white
     font-weight: 300
     margin: 1rem
+    margin-bottom: 2rem
     display: flex
     justify-content: center
     align-items: center
@@ -13,33 +14,92 @@
     i
         padding-right: .3rem
 
-    .container__services
+    ul
         display: flex
-        justify-content: center
-        align-items: center
-        max-width: 700px
-        margin: 0
-        padding: 0
-        border: 1rem solid white
-        border-radius: 8px
-        box-shadow: 0 0 40px -10px #000
-        img
-            width: 20%
-            filter: invert(80%)
-            &:hover
-                filter: grayscale(100%) contrast(50%)
-                z-index: 3000
+        flex-flow: column nowrap
+        list-style: none
+        gap: 2rem
+        li
+            background: rgb(255, 255, 255)
+            // background: linear-gradient(180deg, #ffffff 0%, #ebf9ff 35%, #effaff 100%)
+            padding: 1rem
+            box-shadow: 2px 2px 15px rgb(0, 0, 0, .2)
+            border-radius: 10px
+            div
+                display: flex
+                flex-flow: row nowrap
+                align-items: center
+                img
+                    width: 200px
+                p
+                    color: #105E83
+                    text-align: start
+                    span
+                        font-weight: 600
 
-@media screen and (max-width: 1024px)
+@media screen and (min-width: 1440px)
     #services
-        .container__services
+        ul
             display: flex
+            flex-flow: row wrap
+            align-items: stretch
             justify-content: center
-            align-items: center
-            flex-flow: column wrap
-            border: 12px solid white
-            padding: 0
-            margin: 0
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
-            img
-                width: 100%
+            li
+                width: 300px
+                height: fit-content
+                display: flex
+                flex-flow: row wrap
+                div
+                    display: flex
+                    flex-flow: column wrap
+                    img
+                        width: 300px
+
+                    p
+                        font-size: 1.7rem
+
+@media screen and (max-width: 768px)
+    #services
+        ul
+            display: flex
+            flex-flow: row wrap
+            align-items: stretch
+            justify-content: center
+            li
+                width: 240px
+                height: fit-content
+                display: flex
+                flex-flow: row wrap
+                div
+                    display: flex
+                    flex-flow: column wrap
+                    img
+                        width: 240px
+
+                    p
+                        font-size: 1.2rem
+
+@media screen and (max-width: 425px)
+    #services
+        ul
+            display: flex
+            flex-flow: row wrap
+            align-items: stretch
+            justify-content: center
+            li
+                width: 250px
+                height: fit-content
+                display: flex
+                flex-flow: row wrap
+                div
+                    display: flex
+                    flex-flow: column wrap
+                    
+                    img
+                        width: 250px
+
+                    p
+                        display: none
+                        font-size: 1.4rem
+                    
+                            
